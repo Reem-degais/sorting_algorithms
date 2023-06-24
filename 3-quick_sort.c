@@ -2,7 +2,7 @@
 
 
 /**
- * Lomuto-partition - lomuto partition sorting scheme implementation.
+ * Lomuto_partition - lomuto partition sorting scheme implementation.
  * @array: an array of integers.
  * @low: first array element.
  * @high: last array element.
