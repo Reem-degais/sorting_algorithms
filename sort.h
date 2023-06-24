@@ -14,9 +14,9 @@
  */
 typedef struct listint_s
 {
-        const int n;
-        struct listint_s *prev;
-        struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 void selection_sort(int *array, size_t size);
