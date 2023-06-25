@@ -8,33 +8,35 @@
  *
  * Return: void.
  */
-void shell_sort(int array[], size_t size)
+void	shell_sort(int array[], size_t size)
 {
-    size_t interval = 1;
+	size_t	interval = 1;
+	size_t	i, j;
 
-    while (interval <= size / 3)
+	while (interval <= size / 3)
 	{
-        interval = interval * 3 + 1;
-    }
-    while (interval > 0) {
-        printf("Interval: %zu\n", interval);
-
-        for (size_t i = interval; i < size; ++i) {
-            int temp = array[i];
-            size_t j = i;
-
-            while (j >= interval && array[j - interval] > temp) {
-                array[j] = array[j - interval];
-                j -= interval;
-            }
-
-            array[j] = temp;
-        }
-        printf("Array: ");
-        for (size_t i = 0; i < size; ++i) {
-            printf("%d ", array[i]);
-        }
-        printf("\n");
-        interval = (interval - 1) / 3;
-    }
+		interval = interval * 3 + 1;
+	}
+	while (interval > 0)
+	{
+		for (i = interval; i < size; ++i)
+		{
+			int temp = array[i];
+			j = i;
+			while (j >= interval && array[j - interval] > temp)
+			{
+				array[j] = array[j - interval];
+				j -= interval;
+			}
+			array[j] = temp;
+		}
+		for (i = 0; i < size; ++i)
+		{
+			if (i > 0)
+				printf(", ");
+			printf("%d ", array[i]);
+		}
+		printf("\n");
+		interval = (interval - 1) / 3;
+	}
 }
