@@ -10,7 +10,8 @@
 void	shell_sort(int array[], size_t size)
 {
 	size_t	interval = 1;
-	size_t	i, j, temp;
+	size_t	i, j;
+	int		temp;
 
 	while (interval <= size / 3)
 	{
