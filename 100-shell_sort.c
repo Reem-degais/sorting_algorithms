@@ -7,7 +7,7 @@
  *
  * Return: void.
  */
-void	shell_sort(int array[], size_t size)
+void	shell_sort(int *array, size_t size)
 {
 	size_t	interval = 1;
 	size_t	i, j;
