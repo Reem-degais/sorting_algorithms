@@ -16,6 +16,7 @@ void print_subarray(int *array, size_t start, size_t end)
 		if (i != end)
 			printf(", ");
 	}
+	print("\n");
 }
 
 /**
@@ -38,10 +39,8 @@ size_t right_start, size_t right_end)
 	printf("Merging...\n");
 	printf("[left]: ");
 	print_subarray(array, left_start, left_end);
-	printf("\n");
 	printf("[right]: ");
 	print_subarray(array, right_start, right_end);
-	printf("\n");
 	while (i <= left_end && j <= right_end)
 	{
 		if (array[i] <= array[j])
@@ -74,7 +73,6 @@ size_t right_start, size_t right_end)
 	}
 	printf("[Done]: ");
 	print_subarray(array, left_start, right_end);
-	printf("\n");
 }
 
 /**
