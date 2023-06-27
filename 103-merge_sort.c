@@ -90,7 +90,7 @@ void merge_sort(int *array, size_t size)
 	if (!array || !size)
 		return;
 	temp = malloc(size * sizeof(int));
-	if(!temp)
+	if (!temp)
 		return;
 	merge_sort_helper(array, temp, 0, size - 1);
 	free(temp);
