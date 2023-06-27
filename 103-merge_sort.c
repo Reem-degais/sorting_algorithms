@@ -36,8 +36,6 @@ size_t right_start, size_t right_end)
 	size_t k = left_start;
 	size_t x;
 
-	if (!array || *temp || !left_end || !right_end)
-		return;
 	printf("Merging...\n");
 	printf("[left]: ");
 	print_subarray(array, left_start, left_end);
@@ -87,8 +85,13 @@ void merge_sort_helper(int *array, int *temp, size_t start, size_t end)
  */
 void merge_sort(int *array, size_t size)
 {
-	int *temp = malloc(size * sizeof(int));
+	int *temp;
 
+	if (!array || !size)
+		return;
+	temp = malloc(size * sizeof(int));
+	if(!temp)
+		return;
 	if (temp == NULL)
 	{
 		printf("Memory allocation failed!\n");
