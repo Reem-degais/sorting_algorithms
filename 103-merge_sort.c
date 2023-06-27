@@ -44,15 +44,9 @@ size_t right_start, size_t right_end)
 	while (i <= left_end && j <= right_end)
 	{
 		if (array[i] <= array[j])
-		{
-			temp[k] = array[i];
-			i++;
-		}
+			temp[k] = array[i++];
 		else
-		{
-			temp[k] = array[j];
-			j++;
-		}
+			temp[k] = array[j++];
 		k++;
 	}
 	while (i <= left_end)
