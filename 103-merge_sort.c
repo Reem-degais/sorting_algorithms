@@ -16,7 +16,7 @@ void print_subarray(int *array, size_t start, size_t end)
 		if (i != end)
 			printf(", ");
 	}
-	print("\n");
+	printf("\n");
 }
 
 /**
@@ -56,21 +56,11 @@ size_t right_start, size_t right_end)
 		k++;
 	}
 	while (i <= left_end)
-	{
-		temp[k] = array[i];
-		i++;
-		k++;
-	}
+		temp[k++] = array[i++];
 	while (j <= right_end)
-	{
-		temp[k] = array[j];
-		j++;
-		k++;
-	}
+		temp[k++] = array[j++];
 	for (x = left_start; x <= right_end; x++)
-	{
 		array[x] = temp[x];
-	}
 	printf("[Done]: ");
 	print_subarray(array, left_start, right_end);
 }
