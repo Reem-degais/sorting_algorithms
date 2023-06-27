@@ -36,6 +36,8 @@ size_t right_start, size_t right_end)
 	size_t k = left_start;
 	size_t x;
 
+	if (!array || *temp || !left_end || !right_end)
+		return;
 	printf("Merging...\n");
 	printf("[left]: ");
 	print_subarray(array, left_start, left_end);
